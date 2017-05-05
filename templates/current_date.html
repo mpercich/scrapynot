@@ -1,0 +1,7 @@
+<html>
+	<div>
+{% with user=current_user.first_name|add:current_user.last_name %}
+Hello {{user|default:current_user}}, it's now {{current_date}}.
+{% endwith %}
+	</div>
+</html>
