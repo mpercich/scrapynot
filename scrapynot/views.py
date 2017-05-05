@@ -1,4 +1,6 @@
-from django.http import HttpResponse  
+from django.shortcuts import render
+import datetime
 
 def hello(request):
-    return HttpResponse("Hello world")
+    now = datetime.datetime.now()
+    return render(request, 'current_date.html', {'current_user': request.user, 'current_date': now})
