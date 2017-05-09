@@ -1,5 +1,5 @@
 <html>
-	<div>
+	<div>	
 {% with last_name=current_user.last_name|default:'' %}
 {% with user=current_user.first_name|add:last_name %}
 Hello {{user|default:current_user}}, it's now {{current_date}}.
